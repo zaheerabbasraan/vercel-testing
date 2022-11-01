@@ -1,4 +1,4 @@
 import 'babel-core/register.js';
-import config  from './config.json' assert {type: 'json'};
+import {configData}  from './config.js';
 
-export default config;
+export default configData;

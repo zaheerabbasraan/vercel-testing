@@ -1,7 +1,7 @@
 'use strict';
 import process from 'process';
 import Sequelize from 'sequelize';
-import configData from '../migrations/config/config.json' assert {type: 'json'};
+import {configData} from '../migrations/config/config.js';
 
 import airport from './airport.js';
 import equipment from './equipment.js';
