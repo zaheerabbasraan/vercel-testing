@@ -1,0 +1,152 @@
+
+<%- include("partials/header") %>
+
+<style>
+  #frm-add-book label.error {
+    color: red;
+  }
+  .header-remove-after::after{
+    display: none;
+  }
+</style>
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Assets</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Assets</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div  class="col-md-12"
+            <!-- general form elements disabled -->
+            <% if(messages.error){ %>
+              <div class="alert alert-danger"><%= messages.error %></div>
+            <% } %>
+            <% if(messages.success){ %>
+              <div class="alert alert-success"><%= messages.success %></div>
+            <% } %>
+            <div class="card card-dark">
+                <div class="align-items-center card-header d-flex justify-content-between header-remove-after">
+                  <h3 class="card-title">Vehicles</h3>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">ADD</button>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Vehicle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="/admin/storefront/add-vehicle" id="frm-add-vehicle" method="post">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <!-- text input -->
+                              <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Vehicle name" name="name" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <!-- text input -->
+                              <div class="form-group">
+                                <label>Passenger(min)</label>
+                                <input type="number" name="p_min" min="1" placeholder="Min Passengers" class="form-control" required/>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label>Passenger(Max)</label>
+                                <input type="number" name="p_max" min="1" placeholder="Max Passengers" class="form-control" required/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <!-- text input -->
+                              <div class="form-group">
+                                <label>Childs(min)</label>
+                                <input type="number" name="c_min" min="0" placeholder="Min Childs" class="form-control" required/>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label>Childs(Max)</label>
+                                <input type="number" name="c_max" min="1" placeholder="Max Childs" class="form-control" required/>
+                              </div>
+                            </div>
+                          </div>
+                          <hr/>
+                          <div class="row">
+                            <div class="col-12 d-flex">
+                              <button  type="submit" class="btn btn-dark m-auto">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th style="width: 10px">#</th>
+                        <th>Name</th>
+                        <th>Passengers(MIN)</th>
+                        <th>Passengers(MAX)</th>
+                        <th>Childs(MIN)</th>
+                        <th>Childs(MIN)</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% vehicles.forEach((vehicle,i)=>{ %>
+                        <tr>
+                          <td><%= i %></td>
+                          <td><%= vehicle.name %></td>
+                          <td><%= vehicle.min_passengers %></td>
+                          <td><%= vehicle.max_passengers %></td>
+                          <td><%= vehicle.min_childs %></td>
+                          <td><%= vehicle.max_childs %></td>
+                          <td class="d-flex">
+                            <button class="btn btn-success" style="margin-right: 1rem;"><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+        </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+
+<%- include("partials/footer") %>
