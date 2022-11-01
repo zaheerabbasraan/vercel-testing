@@ -71,6 +71,10 @@ app.use('/admin/lessons',verifyJWT,lessonRouter);
 
 app.use('/api',apiRouter);
 
+app.get('/',function(req,res){
+  return res.send("Hello");
+})
+
 // app.use('/testing',verifyJWT,testingRouter);
 
 app.use((err, req, res, next) => {
