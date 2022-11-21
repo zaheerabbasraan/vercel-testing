@@ -172,14 +172,15 @@ export const hanldeHelmentRemove = async function(req,res){
 // Equipments
 
 export const handleEquipmentAdd = async function(req,res){
-  const {name} = req.body.data;
+  const {name,price} = req.body.data;
   if(!name){
     return res.status(424).json({message:"Error! while adding equipment. Name is missing."});
   }
 
   try {
     await Equipment.create({
-      name
+      name,
+      price
     });
     const equipments = await Equipment.findAll({
       attributes: {exclude:['createdAt','updatedAt']}

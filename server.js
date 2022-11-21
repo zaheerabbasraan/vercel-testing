@@ -71,7 +71,7 @@ app.use('/admin/lessons',verifyJWT,lessonRouter);
 
 app.use('/api',apiRouter);
 
-app.get('/',function(req,res){
+app.get('/test',function(req,res){
   return res.send("Hello");
 })
 
@@ -97,7 +97,7 @@ app.use(function(req, res, next) {
     res.render('error');
   });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`serve at http://localhost:${port}`)
 })
