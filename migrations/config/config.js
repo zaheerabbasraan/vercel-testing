@@ -1,9 +1,9 @@
 export const configData = {
   "development": {
-    "username": "id19892399_zaheerabbas",
-    "password": "Master$123@@@",
-    "database": "id19892399_snow_fun",
-    "host": "https://databases.000webhost.com/sql.php?server=1",
+    "username": "freedb_zaheerabbas",
+    "password": "%7T!VR?&z!nDzu@",
+    "database": "freedb_Snow Fun",
+    "host": "sql.freedb.tech",
     "dialect": "mysql"
   },
   "test": {
