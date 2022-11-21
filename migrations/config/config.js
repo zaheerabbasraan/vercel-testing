@@ -3,7 +3,7 @@ export const configData = {
     "username": "id19892399_zaheerabbas",
     "password": "Master$123@@@",
     "database": "id19892399_snow_fun",
-    "host": "databases.000webhost.com",
+    "host": "https://databases.000webhost.com/sql.php?server=1",
     "dialect": "mysql"
   },
   "test": {
