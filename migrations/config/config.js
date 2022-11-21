@@ -2,7 +2,7 @@ export const configData = {
   "development": {
     "username": "freedb_zaheerabbas",
     "password": "%7T!VR?&z!nDzu@",
-    "database": "freedb_Snow Fun",
+    "database": "freedb_Snow_Fun",
     "host": "sql.freedb.tech",
     "dialect": "mysql"
   },
