@@ -1,9 +1,9 @@
 export const configData = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "snow_fun",
-    "host": "localhost",
+    "username": "id19892399_zaheerabbas",
+    "password": "Master$123@@@",
+    "database": "id19892399_snow_fun",
+    "host": "databases.000webhost.com",
     "dialect": "mysql"
   },
   "test": {
