@@ -14,10 +14,10 @@ export const configData = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "id19892399_zaheerabbas",
+    "password": "Master$123@@@",
+    "database": "id19892399_snow_fun",
+    "host": "databases.000webhost.com",
     "dialect": "mysql"
   }
 }
