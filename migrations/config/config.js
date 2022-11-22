@@ -1,8 +1,8 @@
 export const configData = {
   "development": {
     "username": "freedb_zaheerabbas",
-    "password": "%7T!VR?&z!nDzu@",
-    "database": "freedb_Snow_Fun",
+    "password": "!N*wUeFVu46ZW#e",
+    "database": "freedb_snow-fun",
     "host": "sql.freedb.tech",
     "dialect": "mysql"
   },
