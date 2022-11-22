@@ -14,10 +14,10 @@ export const configData = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "id19892399_zaheerabbas",
-    "password": "Master$123@@@",
-    "database": "id19892399_snow_fun",
-    "host": "databases.000webhost.com",
+    "username": "freedb_zaheerabbas",
+    "password": "!N*wUeFVu46ZW#e",
+    "database": "freedb_snow-fun",
+    "host": "sql.freedb.tech",
     "dialect": "mysql"
   }
 }
